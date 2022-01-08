@@ -15,6 +15,7 @@ function TodoForm({setInputText, setTodos, inputText, todos}) {
         <form>
             <input
             type="text"
+            placeholder="add your todo here..."
             value={inputText}
             onChange={(e) => inputTextHandler(e.target.value)} />
             <input

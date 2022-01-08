@@ -8,9 +8,12 @@ function App() {
   const [todos, setTodos] = useState([]);
   return (
     <div className="App">
-      <p>React Todo</p>
-      <TodoForm setInputText={setInputText} setTodos={setTodos} inputText={inputText} todos={todos} />
-      <TodoList todos={todos} />
+      <section className="top">
+        <p>React Todo</p>
+        <TodoForm setInputText={setInputText} setTodos={setTodos} inputText={inputText} todos={todos} />
+      </section>
+      
+      <TodoList todos={todos} setTodos={setTodos} className="bottom" />
     </div>
   );
 }
