@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-function TodoForm() {
+function TodoForm({setInputText}) {
+    const inputTextHandler = (e) => {
+        setInputText(e);
+    }
     return(
         <form>
-            <input type="text"/>
-            <input type="button" value="add" />
+            <input
+            type="text"
+            onChange={(e) => inputTextHandler(e.target.value)} />
+            <input
+            type="submit"
+            value="add" />
         </form>
     );
 }
