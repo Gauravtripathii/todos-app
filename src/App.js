@@ -5,12 +5,12 @@ import TodoList from './components/TodoList';
 
 function App() {
   const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
       <p>React Todo</p>
-      <TodoForm setInputText={setInputText} />
-      {inputText}
-      <TodoList />
+      <TodoForm setInputText={setInputText} setTodos={setTodos} inputText={inputText} todos={todos} />
+      <TodoList todos={todos} />
     </div>
   );
 }
